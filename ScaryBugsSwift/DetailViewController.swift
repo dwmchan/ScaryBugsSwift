@@ -8,11 +8,20 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITextFieldDelegate, RWTRateViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBOutlet var detailDescriptionLabel: UILabel
+    let picker:UIImagePickerController
+        
+    
+    @IBOutlet var titleField : UITextField
+    @IBOutlet var imageView : UIImageView
+    @IBOutlet var rateView : RWTRateView
 
-
+    
+    init(picker:UIImagePickerController!) {
+        self.picker = picker
+    }
+    
     var detailItem: AnyObject? {
         didSet {
             // Update the view.
@@ -22,9 +31,17 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail: AnyObject = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
+        if let detail:RWTScaryBugDoc = self.detailItem as? RWTScaryBugDoc {
+            if let rv = self.rateView {
+                rv.notSelectedImage = UIImage(named: "shockedface2_empty.png")
+                rv.halfSelectedImage = UIImage(named: "shockedface2_half.png")
+                rv.fullSelectedImage = UIImage(named: "shockedface2_full.png")
+                rv.editable = true
+                rv.maxRating = 5
+                rv.delegate = self as RWTRateViewDelegate
+                rv.rating = detail.data.rating!
+                self.titleField.text = detail.data.title
+                self.imageView.image = detail.fullImage
             }
         }
     }
@@ -39,7 +56,32 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func shouldAutomaticallyForwardAppearanceMethods() -> Bool {
+        return true
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func rateView(rateView:RWTRateView!, ratingDidChange rating:Float!) ->Void {
+       
+        if let detail = self.detailItem as? RWTScaryBugDoc {
+            detail.data.rating = rating
+        }
+    }
 
+    @IBAction func addPictureTapped(sender : UIButton) {
+    }
 
+    @IBAction func titleFieldTextChanged(sender : UITextField) {
+        if let detail = self.detailItem as? RWTScaryBugDoc {
+            detail.data.title = self.titleField.text
+        }
+    }
 }
+
+
 

@@ -13,10 +13,40 @@
 		593796F519584F6A0075B8F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 593796F319584F6A0075B8F1 /* Main.storyboard */; };
 		593796F719584F6A0075B8F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 593796F619584F6A0075B8F1 /* Images.xcassets */; };
 		5937970319584F6A0075B8F1 /* ScaryBugsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5937970219584F6A0075B8F1 /* ScaryBugsSwiftTests.swift */; };
+		5937970E195850690075B8F1 /* RWTScaryBugData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5937970D195850690075B8F1 /* RWTScaryBugData.swift */; };
+		593797101958526B0075B8F1 /* RWTScaryBugDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5937970F1958526B0075B8F1 /* RWTScaryBugDoc.swift */; };
+		59B89578195B0AC100F2A85F /* attribution.txt in Resources */ = {isa = PBXBuildFile; fileRef = 59B8956F195B0AC100F2A85F /* attribution.txt */; };
+		59B89579195B0AC100F2A85F /* centipede.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59B89570195B0AC100F2A85F /* centipede.jpg */; };
+		59B8957A195B0AC100F2A85F /* centipedeThumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59B89571195B0AC100F2A85F /* centipedeThumb.jpg */; };
+		59B8957B195B0AC100F2A85F /* ladybug.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59B89572195B0AC100F2A85F /* ladybug.jpg */; };
+		59B8957C195B0AC100F2A85F /* ladybugThumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59B89573195B0AC100F2A85F /* ladybugThumb.jpg */; };
+		59B8957D195B0AC100F2A85F /* potatoBug.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59B89574195B0AC100F2A85F /* potatoBug.jpg */; };
+		59B8957E195B0AC100F2A85F /* potatoBugThumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59B89575195B0AC100F2A85F /* potatoBugThumb.jpg */; };
+		59B8957F195B0AC100F2A85F /* wolfSpider.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59B89576195B0AC100F2A85F /* wolfSpider.jpg */; };
+		59B89580195B0AC100F2A85F /* wolfSpiderThumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 59B89577195B0AC100F2A85F /* wolfSpiderThumb.jpg */; };
+		59D03EFA195B9BF0006B9AD4 /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D03EF2195B9BF0006B9AD4 /* logo1.png */; };
+		59D03EFB195B9BF0006B9AD4 /* RWTRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D03EF4195B9BF0006B9AD4 /* RWTRateView.m */; };
+		59D03EFD195B9BF0006B9AD4 /* shockedface2_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D03EF7195B9BF0006B9AD4 /* shockedface2_empty.png */; };
+		59D03EFE195B9BF0006B9AD4 /* shockedface2_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D03EF8195B9BF0006B9AD4 /* shockedface2_full.png */; };
+		59D03EFF195B9BF0006B9AD4 /* shockedface2_half.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D03EF9195B9BF0006B9AD4 /* shockedface2_half.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		593796FD19584F6A0075B8F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 593796E019584F6A0075B8F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 593796E719584F6A0075B8F1;
+			remoteInfo = ScaryBugsSwift;
+		};
+		59D03F91195C1722006B9AD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 593796E019584F6A0075B8F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 593796E719584F6A0075B8F1;
+			remoteInfo = ScaryBugsSwift;
+		};
+		59D03F93195C1CD5006B9AD4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 593796E019584F6A0075B8F1 /* Project object */;
 			proxyType = 1;
@@ -36,6 +66,24 @@
 		593796FC19584F6A0075B8F1 /* ScaryBugsSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScaryBugsSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5937970119584F6A0075B8F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5937970219584F6A0075B8F1 /* ScaryBugsSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaryBugsSwiftTests.swift; sourceTree = "<group>"; };
+		5937970D195850690075B8F1 /* RWTScaryBugData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RWTScaryBugData.swift; sourceTree = "<group>"; };
+		5937970F1958526B0075B8F1 /* RWTScaryBugDoc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RWTScaryBugDoc.swift; sourceTree = "<group>"; };
+		59B8956F195B0AC100F2A85F /* attribution.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = attribution.txt; sourceTree = "<group>"; };
+		59B89570195B0AC100F2A85F /* centipede.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = centipede.jpg; sourceTree = "<group>"; };
+		59B89571195B0AC100F2A85F /* centipedeThumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = centipedeThumb.jpg; sourceTree = "<group>"; };
+		59B89572195B0AC100F2A85F /* ladybug.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ladybug.jpg; sourceTree = "<group>"; };
+		59B89573195B0AC100F2A85F /* ladybugThumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ladybugThumb.jpg; sourceTree = "<group>"; };
+		59B89574195B0AC100F2A85F /* potatoBug.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = potatoBug.jpg; sourceTree = "<group>"; };
+		59B89575195B0AC100F2A85F /* potatoBugThumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = potatoBugThumb.jpg; sourceTree = "<group>"; };
+		59B89576195B0AC100F2A85F /* wolfSpider.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wolfSpider.jpg; sourceTree = "<group>"; };
+		59B89577195B0AC100F2A85F /* wolfSpiderThumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wolfSpiderThumb.jpg; sourceTree = "<group>"; };
+		59D03EF1195B9BEF006B9AD4 /* ScaryBugsSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScaryBugsSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		59D03EF2195B9BF0006B9AD4 /* logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo1.png; sourceTree = "<group>"; };
+		59D03EF3195B9BF0006B9AD4 /* RWTRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTRateView.h; sourceTree = "<group>"; };
+		59D03EF4195B9BF0006B9AD4 /* RWTRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTRateView.m; sourceTree = "<group>"; };
+		59D03EF7195B9BF0006B9AD4 /* shockedface2_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shockedface2_empty.png; sourceTree = "<group>"; };
+		59D03EF8195B9BF0006B9AD4 /* shockedface2_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shockedface2_full.png; sourceTree = "<group>"; };
+		59D03EF9195B9BF0006B9AD4 /* shockedface2_half.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shockedface2_half.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +125,8 @@
 		593796EA19584F6A0075B8F1 /* ScaryBugsSwift */ = {
 			isa = PBXGroup;
 			children = (
+				59B8956E195B0AC100F2A85F /* ScaryBugs */,
+				5937970C19584FE40075B8F1 /* Model */,
 				593796ED19584F6A0075B8F1 /* AppDelegate.swift */,
 				593796EF19584F6A0075B8F1 /* MasterViewController.swift */,
 				593796F119584F6A0075B8F1 /* DetailViewController.swift */,
@@ -112,6 +162,38 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5937970C19584FE40075B8F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5937970D195850690075B8F1 /* RWTScaryBugData.swift */,
+				5937970F1958526B0075B8F1 /* RWTScaryBugDoc.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		59B8956E195B0AC100F2A85F /* ScaryBugs */ = {
+			isa = PBXGroup;
+			children = (
+				59D03EF2195B9BF0006B9AD4 /* logo1.png */,
+				59D03EF3195B9BF0006B9AD4 /* RWTRateView.h */,
+				59D03EF4195B9BF0006B9AD4 /* RWTRateView.m */,
+				59D03EF7195B9BF0006B9AD4 /* shockedface2_empty.png */,
+				59D03EF8195B9BF0006B9AD4 /* shockedface2_full.png */,
+				59D03EF9195B9BF0006B9AD4 /* shockedface2_half.png */,
+				59B8956F195B0AC100F2A85F /* attribution.txt */,
+				59B89570195B0AC100F2A85F /* centipede.jpg */,
+				59B89571195B0AC100F2A85F /* centipedeThumb.jpg */,
+				59B89572195B0AC100F2A85F /* ladybug.jpg */,
+				59B89573195B0AC100F2A85F /* ladybugThumb.jpg */,
+				59B89574195B0AC100F2A85F /* potatoBug.jpg */,
+				59B89575195B0AC100F2A85F /* potatoBugThumb.jpg */,
+				59B89576195B0AC100F2A85F /* wolfSpider.jpg */,
+				59B89577195B0AC100F2A85F /* wolfSpiderThumb.jpg */,
+				59D03EF1195B9BEF006B9AD4 /* ScaryBugsSwift-Bridging-Header.h */,
+			);
+			path = ScaryBugs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +226,8 @@
 			);
 			dependencies = (
 				593796FE19584F6A0075B8F1 /* PBXTargetDependency */,
+				59D03F92195C1722006B9AD4 /* PBXTargetDependency */,
+				59D03F94195C1CD5006B9AD4 /* PBXTargetDependency */,
 			);
 			name = ScaryBugsSwiftTests;
 			productName = ScaryBugsSwiftTests;
@@ -193,7 +277,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				593796F519584F6A0075B8F1 /* Main.storyboard in Resources */,
+				59B8957D195B0AC100F2A85F /* potatoBug.jpg in Resources */,
+				59B8957F195B0AC100F2A85F /* wolfSpider.jpg in Resources */,
+				59B89580195B0AC100F2A85F /* wolfSpiderThumb.jpg in Resources */,
+				59B8957C195B0AC100F2A85F /* ladybugThumb.jpg in Resources */,
+				59B89579195B0AC100F2A85F /* centipede.jpg in Resources */,
+				59B8957A195B0AC100F2A85F /* centipedeThumb.jpg in Resources */,
+				59B89578195B0AC100F2A85F /* attribution.txt in Resources */,
+				59B8957E195B0AC100F2A85F /* potatoBugThumb.jpg in Resources */,
+				59B8957B195B0AC100F2A85F /* ladybug.jpg in Resources */,
+				59D03EFA195B9BF0006B9AD4 /* logo1.png in Resources */,
 				593796F719584F6A0075B8F1 /* Images.xcassets in Resources */,
+				59D03EFE195B9BF0006B9AD4 /* shockedface2_full.png in Resources */,
+				59D03EFD195B9BF0006B9AD4 /* shockedface2_empty.png in Resources */,
+				59D03EFF195B9BF0006B9AD4 /* shockedface2_half.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,9 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				593797101958526B0075B8F1 /* RWTScaryBugDoc.swift in Sources */,
 				593796F219584F6A0075B8F1 /* DetailViewController.swift in Sources */,
 				593796F019584F6A0075B8F1 /* MasterViewController.swift in Sources */,
 				593796EE19584F6A0075B8F1 /* AppDelegate.swift in Sources */,
+				59D03EFB195B9BF0006B9AD4 /* RWTRateView.m in Sources */,
+				5937970E195850690075B8F1 /* RWTScaryBugData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +332,16 @@
 			isa = PBXTargetDependency;
 			target = 593796E719584F6A0075B8F1 /* ScaryBugsSwift */;
 			targetProxy = 593796FD19584F6A0075B8F1 /* PBXContainerItemProxy */;
+		};
+		59D03F92195C1722006B9AD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 593796E719584F6A0075B8F1 /* ScaryBugsSwift */;
+			targetProxy = 59D03F91195C1722006B9AD4 /* PBXContainerItemProxy */;
+		};
+		59D03F94195C1CD5006B9AD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 593796E719584F6A0075B8F1 /* ScaryBugsSwift */;
+			targetProxy = 59D03F93195C1CD5006B9AD4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -329,9 +439,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ScaryBugsSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ScaryBugsSwift/ScaryBugs/ScaryBugsSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -340,9 +455,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ScaryBugsSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ScaryBugsSwift/ScaryBugs/ScaryBugsSwift-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -401,6 +520,7 @@
 				5937970819584F6A0075B8F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5937970919584F6A0075B8F1 /* Build configuration list for PBXNativeTarget "ScaryBugsSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +529,7 @@
 				5937970B19584F6A0075B8F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
