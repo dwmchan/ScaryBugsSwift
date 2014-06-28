@@ -45,13 +45,11 @@ class MasterViewController: UITableViewController {
 
     // #pragma mark - Segues
 
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "showDetail" {
-//            let indexPath = self.tableView.indexPathForSelectedRow()
-//            let object = objects[indexPath.row] as NSDate
-//            (segue.destinationViewController as DetailViewController).detailItem = object
-//        }
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var detailController:DetailViewController = segue.destinationViewController as DetailViewController
+        var bug:RWTScaryBugDoc = self.bugs.objectAtIndex(self.tableView.indexPathForSelectedRow().row) as RWTScaryBugDoc
+        detailController.detailItem = bug
+    }
 
     // #pragma mark - Table View
 
@@ -71,6 +69,12 @@ class MasterViewController: UITableViewController {
         cell.imageView.image = bug.thumbImage
         return cell
     }
+    
+    override func didMoveToParentViewController(parent: UIViewController!) {
+        self.tableView.reloadData()
+    }
+    
+    
 
 //    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
 //        // Return false if you do not want the specified item to be editable.

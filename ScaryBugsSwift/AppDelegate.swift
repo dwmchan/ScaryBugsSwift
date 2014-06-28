@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         // Override point for customization after application launch.
-        let bug1:RWTScaryBugDoc = RWTScaryBugDoc(title: "Potato Bug", rating: 4, thumbImage: UIImage(named: "potatoBugThumb.jpg"), fullImage: UIImage(named: "potatoBug.jpg"))
-        let bug2:RWTScaryBugDoc = RWTScaryBugDoc(title: "House Centipede", rating: 4, thumbImage: UIImage(named: "centipedeThumb.jpg"), fullImage: UIImage(named: "centipede.jpg"))
-        let bug3:RWTScaryBugDoc = RWTScaryBugDoc(title: "Wolf Spider", rating: 4, thumbImage: UIImage(named: "wolfSpiderThumb.jpg"), fullImage: UIImage(named: "wolfSpider.jpg"))
-        let bug4:RWTScaryBugDoc = RWTScaryBugDoc(title: "Lady Bug", rating: 4, thumbImage: UIImage(named: "ladybugThumb.jpg"), fullImage: UIImage(named: "ladybug.jpg"))
+        let bug1:RWTScaryBugDoc = RWTScaryBugDoc(title: "Potato Bug", rating: 2, thumbImage: UIImage(named: "potatoBugThumb.jpg"), fullImage: UIImage(named: "potatoBug.jpg"))
+        let bug2:RWTScaryBugDoc = RWTScaryBugDoc(title: "House Centipede", rating: 5, thumbImage: UIImage(named: "centipedeThumb.jpg"), fullImage: UIImage(named: "centipede.jpg"))
+        let bug3:RWTScaryBugDoc = RWTScaryBugDoc(title: "Wolf Spider", rating: 1, thumbImage: UIImage(named: "wolfSpiderThumb.jpg"), fullImage: UIImage(named: "wolfSpider.jpg"))
+        let bug4:RWTScaryBugDoc = RWTScaryBugDoc(title: "Lady Bug", rating: 0, thumbImage: UIImage(named: "ladybugThumb.jpg"), fullImage: UIImage(named: "ladybug.jpg"))
         
         var bugs:NSMutableArray = [bug1,bug2, bug3, bug4]
         

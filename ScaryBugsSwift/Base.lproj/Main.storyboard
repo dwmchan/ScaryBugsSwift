@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -24,7 +24,7 @@
         <scene sceneID="VgW-fR-Quf">
             <objects>
                 <tableViewController title="Master" id="pGg-6v-bdr" customClass="MasterViewController" customModule="ScaryBugsSwift" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mLL-gJ-YKr">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mLL-gJ-YKr">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -76,7 +76,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tap to Change Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8r-rP-uIc">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Change Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8r-rP-uIc">
                                 <rect key="frame" x="20" y="236" width="440" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.18612290293238709" green="0.077151949348063686" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -97,11 +97,11 @@
                                     <constraint firstAttribute="width" secondItem="5De-sT-Klt" secondAttribute="height" multiplier="220:133" id="5WQ-hm-EDN"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oxp-jm-6E9" customClass="RWTRateView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oxp-jm-6E9" customClass="RWTRateView">
                                 <rect key="frame" x="20" y="404" width="440" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABU-am-Ndk">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABU-am-Ndk">
                                 <rect key="frame" x="20" y="114" width="440" height="266"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -113,21 +113,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="N8r-rP-uIc" secondAttribute="trailing" constant="20" id="1Ns-0A-cZI"/>
-                            <constraint firstAttribute="trailing" secondItem="ZEp-yn-qbz" secondAttribute="trailing" constant="20" id="1bW-kL-iZb"/>
-                            <constraint firstItem="ZEp-yn-qbz" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" id="2Da-lK-Ocg"/>
-                            <constraint firstAttribute="trailing" secondItem="Oxp-jm-6E9" secondAttribute="trailing" constant="20" id="5WA-kd-gqW"/>
-                            <constraint firstAttribute="trailing" secondItem="5De-sT-Klt" secondAttribute="trailing" constant="20" id="CPu-pl-6xr"/>
-                            <constraint firstItem="Oxp-jm-6E9" firstAttribute="top" secondItem="ABU-am-Ndk" secondAttribute="bottom" constant="24" id="K5y-qN-Umq"/>
-                            <constraint firstItem="ABU-am-Ndk" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" id="VsO-na-zBx"/>
-                            <constraint firstAttribute="trailing" secondItem="ABU-am-Ndk" secondAttribute="trailing" constant="20" id="X5Z-ls-tPw"/>
-                            <constraint firstItem="5De-sT-Klt" firstAttribute="top" secondItem="ZEp-yn-qbz" secondAttribute="bottom" constant="8" id="b3K-aR-6Bt"/>
-                            <constraint firstItem="N8r-rP-uIc" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" id="eFp-eo-KGI"/>
-                            <constraint firstItem="ZEp-yn-qbz" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" constant="12" id="eaa-0O-WBH"/>
-                            <constraint firstItem="5De-sT-Klt" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" id="gkl-2E-aoY"/>
-                            <constraint firstItem="Oxp-jm-6E9" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" id="lu0-mK-Aeu"/>
-                            <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="Oxp-jm-6E9" secondAttribute="bottom" constant="20" id="muN-AT-lXo"/>
-                            <constraint firstItem="ABU-am-Ndk" firstAttribute="top" secondItem="ZEp-yn-qbz" secondAttribute="bottom" constant="8" id="vAx-Z4-c8I"/>
+                            <constraint firstItem="ABU-am-Ndk" firstAttribute="top" secondItem="ZEp-yn-qbz" secondAttribute="bottom" constant="8" symbolic="YES" id="1M2-BZ-CYT"/>
+                            <constraint firstItem="N8r-rP-uIc" firstAttribute="leading" secondItem="5De-sT-Klt" secondAttribute="leading" id="5gR-JV-tmp"/>
+                            <constraint firstItem="5De-sT-Klt" firstAttribute="trailing" secondItem="N8r-rP-uIc" secondAttribute="trailing" id="6VH-IW-O5t"/>
+                            <constraint firstItem="5De-sT-Klt" firstAttribute="bottom" secondItem="ABU-am-Ndk" secondAttribute="bottom" id="8ug-8N-NnE"/>
+                            <constraint firstAttribute="trailing" secondItem="ZEp-yn-qbz" secondAttribute="trailing" constant="20" symbolic="YES" id="Ajt-Wg-2iX"/>
+                            <constraint firstItem="N8r-rP-uIc" firstAttribute="trailing" secondItem="Oxp-jm-6E9" secondAttribute="trailing" id="BYR-9h-N3o"/>
+                            <constraint firstItem="Oxp-jm-6E9" firstAttribute="top" secondItem="5De-sT-Klt" secondAttribute="bottom" constant="24" id="EJc-XX-rIF"/>
+                            <constraint firstItem="N8r-rP-uIc" firstAttribute="trailing" secondItem="ABU-am-Ndk" secondAttribute="trailing" id="Exn-BP-L8z"/>
+                            <constraint firstItem="N8r-rP-uIc" firstAttribute="leading" secondItem="Oxp-jm-6E9" secondAttribute="leading" id="FgT-46-xY1"/>
+                            <constraint firstItem="N8r-rP-uIc" firstAttribute="top" secondItem="MMQ-IT-qOo" secondAttribute="top" constant="236" id="HXi-gf-a6N"/>
+                            <constraint firstItem="5De-sT-Klt" firstAttribute="leading" secondItem="ABU-am-Ndk" secondAttribute="leading" id="PAQ-Ec-jQp"/>
+                            <constraint firstItem="ZEp-yn-qbz" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" symbolic="YES" id="ZTW-3S-CKi"/>
+                            <constraint firstAttribute="bottom" secondItem="Oxp-jm-6E9" secondAttribute="bottom" constant="20" symbolic="YES" id="e24-gL-fsQ"/>
+                            <constraint firstItem="N8r-rP-uIc" firstAttribute="trailing" secondItem="ZEp-yn-qbz" secondAttribute="trailing" id="fT2-Yk-OZj"/>
+                            <constraint firstItem="5De-sT-Klt" firstAttribute="top" secondItem="ZEp-yn-qbz" secondAttribute="bottom" constant="8" symbolic="YES" id="gti-P1-cf8"/>
+                            <constraint firstItem="N8r-rP-uIc" firstAttribute="leading" secondItem="ZEp-yn-qbz" secondAttribute="leading" id="rfL-HW-fqe"/>
+                            <constraint firstItem="ZEp-yn-qbz" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" constant="12" id="sX6-6J-SWI"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
