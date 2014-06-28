@@ -9,13 +9,6 @@
 import UIKit
 
 class DetailViewController: UIViewController, UITextFieldDelegate, RWTRateViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-    //var picker:UIImagePickerController = UIImagePickerController()
-
-    //var picker = UIImagePickerController()
-
-//    var fullImage:UIImage = UIImage()
-//    var thumbImage:UIImage = UIImage()
     
     @IBOutlet var titleField : UITextField
     @IBOutlet var imageView : UIImageView
@@ -75,13 +68,20 @@ class DetailViewController: UIViewController, UITextFieldDelegate, RWTRateViewDe
     @IBAction func addPictureTapped(sender : UIButton) {
         var picker = UIImagePickerController()
         
-//        if picker == nil {
-            //picker = UIImagePickerController()
+        SVProgressHUD.showWithStatus("Loading Picker...")
+        
+        var concurrentQueue:dispatch_queue_t = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+        
+        dispatch_async(concurrentQueue, {
             picker.delegate = self
             picker.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum
             picker.allowsEditing = false
-//        }
-        presentViewController(picker, animated: true, completion: nil)
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                self.presentViewController(picker, animated: true, completion: nil)
+                SVProgressHUD.dismiss()
+                })
+            })
     }
     
 //    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
@@ -96,13 +96,23 @@ class DetailViewController: UIViewController, UITextFieldDelegate, RWTRateViewDe
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: NSDictionary!) {
         var fullImage:UIImage = info.objectForKey(UIImagePickerControllerOriginalImage) as UIImage
-        var thumbImage:UIImage = fullImage.imageByScalingAndCroppingForSize(CGSizeMake(44,44)) as UIImage
-        if let detail = detailItem as? RWTScaryBugDoc {
-            detail.fullImage = fullImage
-            detail.thumbImage = thumbImage
-            imageView.image = fullImage
-        }
         
+        SVProgressHUD.showWithStatus("Resizing image...")
+        
+        var concurrentQueue:dispatch_queue_t = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+        
+        dispatch_async(concurrentQueue, {
+            var thumbImage:UIImage = fullImage.imageByScalingAndCroppingForSize(CGSizeMake(44,44)) as UIImage
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                if let detail = self.detailItem as? RWTScaryBugDoc {
+                    detail.fullImage = fullImage
+                    detail.thumbImage = thumbImage
+                    self.imageView.image = fullImage
+                    SVProgressHUD.dismiss()
+                }
+                })
+            })
          dismissViewControllerAnimated(true, completion: nil)
     }
     

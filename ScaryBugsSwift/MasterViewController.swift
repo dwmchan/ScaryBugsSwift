@@ -20,10 +20,10 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        self.navigationItem.leftBarButtonItem = self.editButtonItem()
-//
-//        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-//        self.navigationItem.rightBarButtonItem = addButton
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
+        self.navigationItem.rightBarButtonItem = addButton
         self.tableView.delegate = self
         
         self.title = "Scary Bugs"
@@ -34,14 +34,23 @@ class MasterViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-//    func insertNewObject(sender: AnyObject) {
+    func insertNewObject(sender: AnyObject) {
 //        if objects == nil {
 //            objects = NSMutableArray()
 //        }
 //        objects.insertObject(NSDate.date(), atIndex: 0)
 //        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
 //        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-//    }
+        var newDoc:RWTScaryBugDoc = RWTScaryBugDoc(title: "New Bug", rating: 0, thumbImage: UIImage(), fullImage: UIImage())
+        bugs.addObject(newDoc)
+        var indexPath:NSIndexPath = NSIndexPath(forRow: bugs.count - 1, inSection: 0)
+        var indexPaths:NSArray = NSArray(object: indexPath)
+        self.tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
+        self.tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Middle)
+        
+        self.performSegueWithIdentifier("MySegue", sender: self)
+
+    }
 
     // #pragma mark - Segues
 
@@ -81,14 +90,14 @@ class MasterViewController: UITableViewController {
 //        return true
 //    }
 
-//    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-//        if editingStyle == .Delete {
-//            objects.removeObjectAtIndex(indexPath.row)
-//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-//        } else if editingStyle == .Insert {
-//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-//        }
-//    }
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            bugs.removeObjectAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+        }
+    }
 
 
 }

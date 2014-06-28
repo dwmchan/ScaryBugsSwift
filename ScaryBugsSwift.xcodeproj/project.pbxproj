@@ -30,6 +30,8 @@
 		59D03EFD195B9BF0006B9AD4 /* shockedface2_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D03EF7195B9BF0006B9AD4 /* shockedface2_empty.png */; };
 		59D03EFE195B9BF0006B9AD4 /* shockedface2_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D03EF8195B9BF0006B9AD4 /* shockedface2_full.png */; };
 		59D03EFF195B9BF0006B9AD4 /* shockedface2_half.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D03EF9195B9BF0006B9AD4 /* shockedface2_half.png */; };
+		59F37503195EE6C000A21149 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F37502195EE6C000A21149 /* SVProgressHUD.m */; };
+		59F37505195EE6F700A21149 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F37504195EE6F700A21149 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,9 @@
 		59D03EF7195B9BF0006B9AD4 /* shockedface2_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shockedface2_empty.png; sourceTree = "<group>"; };
 		59D03EF8195B9BF0006B9AD4 /* shockedface2_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shockedface2_full.png; sourceTree = "<group>"; };
 		59D03EF9195B9BF0006B9AD4 /* shockedface2_half.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shockedface2_half.png; sourceTree = "<group>"; };
+		59F37501195EE6C000A21149 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		59F37502195EE6C000A21149 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		59F37504195EE6F700A21149 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59F37505195EE6F700A21149 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +115,7 @@
 		593796DF19584F6A0075B8F1 = {
 			isa = PBXGroup;
 			children = (
+				59F37504195EE6F700A21149 /* QuartzCore.framework */,
 				593796EA19584F6A0075B8F1 /* ScaryBugsSwift */,
 				593796FF19584F6A0075B8F1 /* ScaryBugsSwiftTests */,
 				593796E919584F6A0075B8F1 /* Products */,
@@ -177,6 +184,8 @@
 		59B8956E195B0AC100F2A85F /* ScaryBugs */ = {
 			isa = PBXGroup;
 			children = (
+				59F37501195EE6C000A21149 /* SVProgressHUD.h */,
+				59F37502195EE6C000A21149 /* SVProgressHUD.m */,
 				59D03EF2195B9BF0006B9AD4 /* logo1.png */,
 				59D03EF3195B9BF0006B9AD4 /* RWTRateView.h */,
 				59D03EF4195B9BF0006B9AD4 /* RWTRateView.m */,
@@ -313,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				593797101958526B0075B8F1 /* RWTScaryBugDoc.swift in Sources */,
+				59F37503195EE6C000A21149 /* SVProgressHUD.m in Sources */,
 				593796F219584F6A0075B8F1 /* DetailViewController.swift in Sources */,
 				593796F019584F6A0075B8F1 /* MasterViewController.swift in Sources */,
 				593796EE19584F6A0075B8F1 /* AppDelegate.swift in Sources */,
