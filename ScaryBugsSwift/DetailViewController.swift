@@ -10,20 +10,16 @@ import UIKit
 
 class DetailViewController: UIViewController, UITextFieldDelegate, RWTRateViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    var picker:UIImagePickerController = UIImagePickerController()
-    var fullImage:UIImage = UIImage()
-    var thumbImage:UIImage = UIImage()
+    //var picker:UIImagePickerController = UIImagePickerController()
+
+    //var picker = UIImagePickerController()
+
+//    var fullImage:UIImage = UIImage()
+//    var thumbImage:UIImage = UIImage()
     
     @IBOutlet var titleField : UITextField
     @IBOutlet var imageView : UIImageView
     @IBOutlet var rateView : RWTRateView
-
-//    init(picker:UIImagePickerController, fullImage:UIImage, thumbImage:UIImage) {
-//        self.picker = picker
-//        self.fullImage = fullImage
-//        self.thumbImage = thumbImage
-//        super.init(nibName: nil, bundle: nil)
-//    }
 
     var detailItem: AnyObject? {
         didSet {
@@ -34,7 +30,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, RWTRateViewDe
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail:RWTScaryBugDoc = self.detailItem as? RWTScaryBugDoc {
+        if let detail:RWTScaryBugDoc = detailItem as? RWTScaryBugDoc {
             if let rv = self.rateView {
                 rv.notSelectedImage = UIImage(named: "shockedface2_empty.png")
                 rv.halfSelectedImage = UIImage(named: "shockedface2_half.png")
@@ -43,8 +39,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, RWTRateViewDe
                 rv.maxRating = 5
                 rv.delegate = self /*as RWTRateViewDelegate */
                 rv.rating = detail.data.rating!
-                self.titleField.text = detail.data.title
-                self.imageView.image = detail.fullImage
+                titleField.text = detail.data.title
+                imageView.image = detail.fullImage
             }
         }
     }
@@ -71,40 +67,55 @@ class DetailViewController: UIViewController, UITextFieldDelegate, RWTRateViewDe
     
     func rateView(rateView:RWTRateView!, ratingDidChange rating:Float) -> Void {
        
-        if let detail = self.detailItem as? RWTScaryBugDoc {
+        if let detail = detailItem as? RWTScaryBugDoc {
             detail.data.rating = rating
         }
     }
     
     @IBAction func addPictureTapped(sender : UIButton) {
-        if self.picker == nil {
-            self.picker = UIImagePickerController()
-            self.picker.delegate = self
-            self.picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-            self.picker.allowsEditing = false
+        var picker = UIImagePickerController()
+        
+//        if picker == nil {
+            //picker = UIImagePickerController()
+            picker.delegate = self
+            picker.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum
+            picker.allowsEditing = false
+//        }
+        presentViewController(picker, animated: true, completion: nil)
+    }
+    
+//    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
+//        var thumbImage:UIImage = image.imageByScalingAndCroppingForSize(CGSizeMake(44, 44))
+//        if let detail = detailItem as? RWTScaryBugDoc {
+//            detail.fullImage = image
+//            detail.thumbImage = thumbImage
+//            imageView.image = image
+//        }
+//        dismissViewControllerAnimated(true, completion: nil)
+//    }
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: NSDictionary!) {
+        var fullImage:UIImage = info.objectForKey(UIImagePickerControllerOriginalImage) as UIImage
+        var thumbImage:UIImage = fullImage.imageByScalingAndCroppingForSize(CGSizeMake(44,44)) as UIImage
+        if let detail = detailItem as? RWTScaryBugDoc {
+            detail.fullImage = fullImage
+            detail.thumbImage = thumbImage
+            imageView.image = fullImage
         }
-        self.presentViewController(picker, animated: true, completion: nil)
+        
+         dismissViewControllerAnimated(true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController!) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: NSDictionary!) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-        
-        fullImage = info.objectForKey(UIImagePickerControllerOriginalImage) as UIImage
-        thumbImage = fullImage.imageByScalingAndCroppingForSize(CGSizeMake(44,44))
-        if let detail = self.detailItem as? DetailViewController {
-            detail.fullImage = fullImage
-            detail.thumbImage = thumbImage
-            self.imageView.image = fullImage
-        }
-    }
+
+    
 
     @IBAction func titleFieldTextChanged(sender : UITextField) {
-        if let detail = self.detailItem as? RWTScaryBugDoc {
-            detail.data.title = self.titleField.text
+        if let detail = detailItem as? RWTScaryBugDoc {
+            detail.data.title = titleField.text
         }
     }
 }
