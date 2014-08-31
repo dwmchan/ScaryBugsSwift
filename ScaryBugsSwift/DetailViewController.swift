@@ -10,9 +10,9 @@ import UIKit
 
 class DetailViewController: UIViewController, UITextFieldDelegate, RWTRateViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBOutlet var titleField : UITextField
-    @IBOutlet var imageView : UIImageView
-    @IBOutlet var rateView : RWTRateView
+    @IBOutlet var titleField : UITextField!
+    @IBOutlet var imageView : UIImageView!
+    @IBOutlet var rateView : RWTRateView!
 
     var detailItem: AnyObject? {
         didSet {

@@ -12,7 +12,7 @@ extension UIImage {
     
     func imageByScalingAndCroppingForSize(targetSize:CGSize) -> UIImage {
         var sourceImage:UIImage = self
-        var newImage:UIImage
+        var newImage:UIImage?
         var imageSize:CGSize = sourceImage.size
         var width:CGFloat = imageSize.width
         var height:CGFloat = imageSize.height
@@ -59,6 +59,6 @@ extension UIImage {
         }
         
         UIGraphicsEndImageContext()
-        return newImage
+        return newImage!
     }
 }
